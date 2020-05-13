@@ -11,25 +11,28 @@ export interface MonthPickerProps {
   nextClickHandler(): void;
 }
 
-interface DefaultProps {
+interface DefaultProps {}
 
-}
-
-interface State {
-}
+interface State {}
 
 /** MonthPicker */
 export class MonthPicker extends React.Component<MonthPickerProps, State> {
-  static defaultProps: DefaultProps = {
-
-  };
+  static defaultProps: DefaultProps = {};
 
   render() {
-    const { previousClickHandler, value, nextClickHandler, ...rest } = this.props;
+    const {
+      previousClickHandler,
+      value,
+      nextClickHandler,
+      ...rest
+    } = this.props;
 
     return (
       <div {...styles('root', {}, rest)}>
-        <ChevronLeft className={styles.navigator} onClick={previousClickHandler} />
+        <ChevronLeft
+          className={styles.navigator}
+          onClick={previousClickHandler}
+        />
         <Text className={styles.value}>{value}</Text>
         <ChevronRight className={styles.navigator} onClick={nextClickHandler} />
       </div>

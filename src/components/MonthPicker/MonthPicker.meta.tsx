@@ -7,6 +7,6 @@ MonthPickerMetadata.nonReactStrictModeCompliant = true;
 MonthPickerMetadata.addSim({
   title: 'render',
   props: {
-    buttonText: 'Click me!'
+    buttonText: 'Click me!',
   },
 });

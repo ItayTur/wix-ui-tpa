@@ -21,7 +21,10 @@ describe('monthPicker', () => {
 
   it('should render', async () => {
     const driver = monthPickerTestkitFactory({ dataHook });
-    await waitForVisibilityOf(await driver.element(), 'Cannot find MonthPicker');
+    await waitForVisibilityOf(
+      await driver.element(),
+      'Cannot find MonthPicker',
+    );
     expect((await driver.element()).isDisplayed()).toBe(true);
   });
 });
